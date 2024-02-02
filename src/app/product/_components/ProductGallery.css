@@ -1,0 +1,41 @@
+.product-gallery-container {
+    display: grid;
+    grid-template-columns:auto auto;
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+        'firstImage firstImage'
+        'secondImage secondImage'
+        'thirdImage thirdImage'        
+        ;
+}
+
+@media (min-width:768px) {
+    .product-gallery-container {
+        grid-template-areas: 
+            'firstImage thirdImage'
+            'secondImage thirdImage'
+            '.             .'        
+            ;
+    }
+    
+}
+
+@media (min-width:1024px) {
+    .product-gallery-container {
+        grid-template-columns:41% auto;
+    }
+    
+}
+
+
+.product-gallery-first {
+    grid-area: firstImage;
+}
+
+.product-gallery-second {
+    grid-area: secondImage;
+}
+
+.product-gallery-third {
+    grid-area: thirdImage;
+}

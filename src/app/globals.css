@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    /* text-color */
+    --color-primary: #000000;
+    --color-secondary: #979797;
+    --color-accent: #D87D4A;
+    /* background color */
+    --bg-page: #F1F1F1;
+    /* input border color */
+    --input-border-input: #CFCFCF;
+    --input-border-input-focus: #D87D4A;
+    --input-border-input-error: #CD2C2C;
+}

@@ -1,0 +1,11 @@
+.input-radio-option>input[type="radio"]:checked+.input-radio-option-content {
+    border-color: var(--color-accent);
+}
+
+.input-radio-option>input[type="radio"]:checked+.input-radio-option-content .input-radio-option-icon {
+    background-color: var(--color-accent);
+}
+
+.flow > * + * {
+    margin-top: 1rem;
+}

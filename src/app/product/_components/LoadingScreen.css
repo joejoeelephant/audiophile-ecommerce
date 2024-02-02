@@ -1,0 +1,33 @@
+.skeleton-title, .skeleton-text, .skeleton-img {
+  background-color: #ddd;
+  border-radius: 4px;
+}
+
+.skeleton-title {
+  height: 20px;
+  width: 70%;
+}
+
+.skeleton-text {
+  height: 10px;
+  width: 100%;
+}
+
+  /* Shimmer effect */
+@keyframes shimmer {
+  0% { background-position: -468px 0 }
+  100% { background-position: 468px 0; }
+}
+
+.skeleton-title, .skeleton-text,.skeleton-img {
+  animation-duration: 1.5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: shimmer;
+  animation-timing-function: linear;
+  background: #f6f7f8;
+  background: linear-gradient(to right, #eee 8%, #ddd 18%, #eee 33%);
+  background-size: 800px 104px;
+  position: relative;
+}
+  
