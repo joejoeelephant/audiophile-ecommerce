@@ -10,7 +10,6 @@ import ProductGallery from '../_components/ProductGallery';
 import AlsoLike from '../_components/AlsoLike';
 import { useProduct } from '../_hooks/useProduct';
 import { useRouter } from 'next/navigation';
-import { Suspense } from 'react';
 import LoadingScreen from '../_components/LoadingScreen';
 import ErrorScreen from '../_components/ErrorScreen';
 export default function Page({ params }: { params: { slug: string[] } }) {
@@ -40,14 +39,12 @@ export default function Page({ params }: { params: { slug: string[] } }) {
         <main>
             <ToolBar />
             <GoBack />
-            <Suspense fallback={<div>Loading...</div>}>
-                <ProductHeader headerData={headerData}/>
-                <ProductFeatures features={productData.features} boxItems={productData.boxItems}/>
-                <ProductGallery images={productData.galleries}/>
-                <AlsoLike />
-                <NavList />
-                <ProductionHighlight />
-            </Suspense>
+            <ProductHeader headerData={headerData}/>
+            <ProductFeatures features={productData.features} boxItems={productData.boxItems}/>
+            <ProductGallery images={productData.galleries}/>
+            <AlsoLike />
+            <NavList />
+            <ProductionHighlight />
             <div className='h-20'></div>
         </main>
     )

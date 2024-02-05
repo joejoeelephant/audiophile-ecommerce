@@ -5,7 +5,6 @@ import { ResponsiveImageProps } from '@/lib/type'
 import { useCartData } from '@/context/useCartDataContext'
 import AddCartAnimation from './AddCartAnimation'
 import { CartAnimationProps } from './AddCartAnimation'
-
 type ProductHeaderProps = {
     id: number;
     name: string;
@@ -23,6 +22,7 @@ export default function ProductHeader({headerData}:{headerData:  ProductHeaderPr
     const productImageRef = useRef<HTMLDivElement | null>(null)
     const [cartAnimationData, setCartAnimationData] = useState<CartAnimationProps>({top:0, left:0, width:0, height:0, productImageData})
     const [animateTrigger, setAnimateTrigger] = useState(false)
+    
     useEffect(() => {
         if(!productImageRef.current) return;
         const {top, left,width, height} = productImageRef.current.getBoundingClientRect();
@@ -66,6 +66,7 @@ export default function ProductHeader({headerData}:{headerData:  ProductHeaderPr
         }})
         animateActivate()
     },1000)
+
     return (
         <div>
             <div className="container mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-36">

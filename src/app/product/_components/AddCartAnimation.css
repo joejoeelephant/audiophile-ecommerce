@@ -1,6 +1,7 @@
 .product-image-animate-wrapper{
     --top-position: 10vh;
     --left-position: 10vw;
+    --top-end-position: 32px;
     position: absolute;
     top: var(--top-position);
     left: var(--left-position);
@@ -20,7 +21,7 @@
         transform: scale(1);
     }
     100% {
-        top: 32px;
+        top: var(--top-end-position);
         left: calc(100vw - var(--left-position));
         width:10px;
         height:10px;
